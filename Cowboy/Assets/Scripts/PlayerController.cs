@@ -36,14 +36,15 @@ public class PlayerController : MonoBehaviour
         Look();
         Move();
     }
-
+    //movimiento del personaje
     private void Move()
     {
         if (characterController.isGrounded)
         {
-            moveInput = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical"));
+            //solo movimiento de izquierda a derecha
+            moveInput = new Vector3(Input.GetAxis("Horizontal"), 0f, 0);
             moveInput = Vector3.ClampMagnitude(moveInput, 1f);
-
+            /*
             if (Input.GetButton("Sprint"))
             {
                 moveInput = transform.TransformDirection(moveInput) * runSpeed;
@@ -52,17 +53,18 @@ public class PlayerController : MonoBehaviour
             {
                 moveInput = transform.TransformDirection(moveInput) * walkSpeed;
             }
-
+            
             if (Input.GetButtonDown("Jump"))
             {
                 moveInput.y = Mathf.Sqrt(jumpScale * -2f * gravityScale);
             }
+            */
         }
 
         moveInput.y += gravityScale * Time.deltaTime;
         characterController.Move(moveInput * Time.deltaTime);
     }   
-
+    //movimiento de la camara
     private void Look()
     {
 

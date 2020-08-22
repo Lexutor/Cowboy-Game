@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /*aca no hay nada solo una condicion para la colision de la bala con el enemigo
+     *tampoco funciona
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag=="Bullet")
@@ -23,4 +14,5 @@ public class EnemyScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
 }
