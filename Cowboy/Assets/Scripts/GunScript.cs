@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GunScript : MonoBehaviour
 {
+    
     [Header("General")]
     public LayerMask hitLayers;
     public GameObject bulletPrefab;
@@ -12,6 +13,7 @@ public class GunScript : MonoBehaviour
     public float gunRange = 200;
 
     private Transform cam_PlayerTransform;
+
 
     private void Start()
     {
@@ -23,6 +25,7 @@ public class GunScript : MonoBehaviour
         GunShoot();
     }
 
+    //disparo del arma
     private void GunShoot()
     {
         if (Input.GetButtonDown("Fire1"))
