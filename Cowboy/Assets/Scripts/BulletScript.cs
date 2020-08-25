@@ -4,18 +4,9 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /* esto es la colision de labala con el enemigo
+     * aun no funciona
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag.Equals("Enemy"))
@@ -23,4 +14,5 @@ public class BulletScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    */
 }

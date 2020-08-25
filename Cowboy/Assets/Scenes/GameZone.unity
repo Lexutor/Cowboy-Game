@@ -209,7 +209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47238820}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 11.09, y: 1.803, z: 34.384}
+  m_LocalPosition: {x: 1.1, y: 1.803, z: 22.84}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 867350942}
@@ -434,7 +434,7 @@ GameObject:
   - component: {fileID: 749434662}
   - component: {fileID: 749434661}
   m_Layer: 0
-  m_Name: Gun (1)
+  m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,7 +545,7 @@ GameObject:
   - component: {fileID: 754083080}
   - component: {fileID: 754083079}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: bala2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 482, y: -163}
+  m_AnchoredPosition: {x: -204, y: 103}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &754083079
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 1076093403}
   - component: {fileID: 1076093402}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: bala1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1006,7 +1006,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 517, y: -163}
+  m_AnchoredPosition: {x: -169, y: 103}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1076093402
@@ -1388,7 +1388,7 @@ GameObject:
   - component: {fileID: 1703676147}
   - component: {fileID: 1703676146}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: bala3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1410,7 +1410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: -163}
+  m_AnchoredPosition: {x: -236, y: 103}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703676146
@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 2105134746}
   - component: {fileID: 2105134745}
   m_Layer: 5
-  m_Name: Image
+  m_Name: mira
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
