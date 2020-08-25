@@ -2,13 +2,13 @@
 #
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
 #
-/[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
-/[Bb]uilds/
-/[Ll]ogs/
-/[Mm]emoryCaptures/
+Cowboy/[Ll]ibrary/
+Cowboy/[Tt]emp/
+Cowboy/[Oo]bj/
+Cowboy/[Bb]uild
+Cowboy//[Bb]uilds/
+Cowboy//[Ll]ogs/
+Cowboy//[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
@@ -60,7 +60,6 @@ crashlytics-build.properties
 
 # OS generated
 .DS_Store*
-._*
 .Spotlight-V100
 .Trashes
 ehthumbs.db
@@ -71,3 +70,4 @@ Corridor/Library/metadata/
 
 # Others
 *.stackdump
+Cowboy/Library/SourceAssetDB
