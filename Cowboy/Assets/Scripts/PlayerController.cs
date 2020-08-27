@@ -42,8 +42,38 @@ public class PlayerController : MonoBehaviour
     /// </summary>
     public void Shoot()
     {
-        Debug.Log("Disparo");
         actionButtonsController.takeAction = false;
+        actionButtonsController.shootAction = true;
+    }
+
+    /// <summary>
+    /// Dispara a alguna zona dependiendo de la dirección escogida.
+    /// </summary>
+    /// <param name="direction">Dirección del disparo.</param>
+    public void ShootDirection(string direction)
+    {
+        switch (direction)
+        {
+            case "derecha":
+                Debug.Log("Disparo hacia la derecha.");
+                actionButtonsController.shootAction = false;
+                break;
+
+            case "izquierda":
+                Debug.Log("Disparo hacia la izquierda.");
+                actionButtonsController.shootAction = false;
+                break;
+
+            case "centro":
+                Debug.Log("Disparo hacia el centro.");
+                actionButtonsController.shootAction = false;
+                break;
+
+            default:
+                Debug.Log("Dirección incorrecta.");
+                actionButtonsController.shootAction = false;
+                break;
+        }
     }
 
 }
