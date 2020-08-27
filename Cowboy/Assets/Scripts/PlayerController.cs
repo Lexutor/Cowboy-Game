@@ -8,33 +8,28 @@ public class PlayerController : MonoBehaviour
     public Camera playerCamera;
 
     [Header("PlayerStads")]
-    public float dashSpeed = 1000f;
+    public float dashSpeed = 200f;
 
-    private new Rigidbody rigidbody;
+    private Rigidbody playerRigidbody;
 
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody>();
-
+        playerRigidbody = GetComponent<Rigidbody>();
     }
 
-    void Update()
+    public void DodgeLeft()
     {
-        Move();
+        playerRigidbody.velocity = Vector3.left * dashSpeed * Time.deltaTime;
     }
 
-    private void Move()
+    public void DodgeRight()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            rigidbody.velocity = Vector3.left * dashSpeed * Time.deltaTime;
-        }
+        playerRigidbody.velocity = Vector3.right * dashSpeed * Time.deltaTime;
+    }
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            rigidbody.velocity = Vector3.right * dashSpeed * Time.deltaTime;
-        }
-
+    public void Shoot()
+    {
+        Debug.Log("Disparo");
     }
 
 }
