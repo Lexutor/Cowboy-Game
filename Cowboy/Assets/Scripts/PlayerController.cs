@@ -26,10 +26,28 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Lo que rotará el personaje para ver de frente a su enemigo.
+    /// </summary>
+    /// <value>Rotación destino.</value>
+    public Quaternion TargetRotation 
+    {
+        get { return targetRotation; }
+
+        set
+        {
+            targetRotation = value;
+
+            StopCoroutine("Rotating");
+            StartCoroutine("Rotating", targetRotation);
+        }
+    }
+
     private Vector3 targetPosition;
+    private Quaternion targetRotation;
 
     [Header("PlayerStads")]
-    public float dashSpeed = 5f, smoothing = 1f;
+    public float dashSpeed = 5, dashSmoothing = 1, rotationSmoothing = 3.5f;
     
     /// <summary>
     /// Movimiento lateral del personaje.
@@ -114,17 +132,29 @@ public class PlayerController : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         Vector3 rotation = lookRotation.eulerAngles;
 
-        transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        TargetRotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     IEnumerator Dodging(Vector3 targetPos)
     {
         while (Vector3.Distance(transform.position, targetPos) > 0.05f)
         {
-            transform.position = Vector3.Lerp(transform.position, targetPos, smoothing * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, targetPos, dashSmoothing * Time.deltaTime);
             yield return null;
         }
 
         LookAtEnemy();
+    }
+
+    IEnumerator Rotating(Quaternion targetRot)
+    {
+        float t = 0;
+        t = Mathf.Lerp(t, 1f, rotationSmoothing * Time.deltaTime);
+
+        while (t > 0.001)
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSmoothing * Time.deltaTime);
+            yield return null;
+        }
     }
 }
