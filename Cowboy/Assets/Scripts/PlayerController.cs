@@ -144,6 +144,7 @@ public class PlayerController : MonoBehaviour
         }
 
         LookAtEnemy();
+        StopCoroutine("Dodging");
     }
 
     IEnumerator Rotating(Quaternion targetRot)
@@ -156,5 +157,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, rotationSmoothing * Time.deltaTime);
             yield return null;
         }
+
+        StopCoroutine("Rotating");
     }
 }
