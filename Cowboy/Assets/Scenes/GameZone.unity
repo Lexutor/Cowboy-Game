@@ -2112,7 +2112,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCamera: {fileID: 963194227}
   actionButtonsController: {fileID: 773686988}
-  dashSpeed: 200
+  enemy: {fileID: 47238824}
+  dashSpeed: 3
+  smoothing: 1
 --- !u!54 &1506578128
 Rigidbody:
   m_ObjectHideFlags: 0
